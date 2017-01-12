@@ -61,6 +61,9 @@
 .toggle-default label.active {
   background-color: #a4c639; }
 
+.line-container {
+  width: 45%; }
+
 .bulletbar {
   margin: 0;
   padding: 0;
@@ -119,3 +122,81 @@
     .bulletbar-default li.active .bubble:before, .bulletbar-default li.active .bubble:after {
       background-color: #65d074;
       border-color: #247830; }
+
+.timeline {
+  position: relative;
+  padding: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  .timeline .timeline-block:first-child {
+    margin-top: 0; }
+  .timeline .timeline-block .timeline-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #130f14, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 1px rgba(0, 0, 0, 0.05); }
+    .timeline .timeline-block .timeline-img img {
+      display: block;
+      width: 24px;
+      height: 24px;
+      position: relative;
+      left: 50%;
+      top: 50%;
+      margin-left: -12px;
+      margin-top: -12px; }
+  .timeline .timeline-block .timeline-content {
+    margin-left: 0;
+    padding: 0.6em; }
+    .timeline .timeline-block .timeline-content:before {
+      content: '';
+      position: absolute;
+      top: 16px;
+      right: 100%;
+      height: 0;
+      width: 0;
+      border: 7px solid transparent;
+      border-right: 7px solid white; }
+    .timeline .timeline-block .timeline-content:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+.verticle-timeline {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto; }
+  .verticle-timeline:before {
+    left: 50%;
+    margin-left: -2px;
+    /* this is the vertical line */
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: #d7e4ed; }
+  .verticle-timeline .timeline-block {
+    position: relative;
+    margin: 2em 0; }
+    .verticle-timeline .timeline-block:after {
+      content: "";
+      display: table;
+      clear: both; }
+    .verticle-timeline .timeline-block .timeline-img {
+      width: 60px;
+      height: 60px;
+      left: 50%;
+      margin-left: -30px;
+      -webkit-transform: translateZ(0);
+      -webkit-backface-visibility: hidden; }
+    .verticle-timeline .timeline-block .timeline-content {
+      margin-left: 0;
+      padding: 0.3em;
+      width: 45%; }
+    .verticle-timeline .timeline-block:nth-child(even) .timeline-content {
+      float: right; }
+    .verticle-timeline .timeline-block:nth-child(odd) .timeline-content {
+      text-align: right; }
