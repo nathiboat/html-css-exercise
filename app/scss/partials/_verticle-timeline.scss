@@ -10,6 +10,7 @@
       margin-top: 0;
     }
     .timeline-img{
+
       position: absolute;
       top: 0;
       left: 0;
@@ -31,9 +32,20 @@
     }
 
     .timeline-content{
+      font-family: "Arial", sans-serif;
       margin-left: 0;
       padding: 0.6em;
+      a{
+        color: $twitter;
+        &:hover{
+          color: $twitter;
 
+        }
+      }
+      .date{
+        font-size: 12px;
+        color: dimgray;
+      }
       &:before{
         content: '';
         position: absolute;
