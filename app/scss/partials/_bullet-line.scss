@@ -1,0 +1,79 @@
+.bulletbar{
+  margin: 0;
+  padding: 0;
+  font-size: 80%;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  display: flex;
+  flex: 1;
+   li {
+    list-style: none;
+    text-align: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-overflow: ellipsis;
+    color: #bbbbbb;
+    display: block;
+    &:before{
+      left: 0;
+      display: block;
+      position: absolute;
+      top: 9px;
+      width: 100%;
+      height: 3px;
+      content: '';
+      background-color: #bbbbbb;
+
+    }
+     .bubble{
+      border-radius: 1000px;
+      width: 20px;
+      height: 20px;
+      background-color: #bbbbbb;
+      display: block;
+      margin: 0 auto 0.5em auto;
+      border-bottom: 1px solid #888888;
+
+
+       &:after{
+           right: 0;
+       }
+    }
+    .glyphicon{
+      display: none;
+    }
+  }
+  li.active{
+    .glyphicon{
+      display: block;
+      margin: 0 auto 0.1em auto;
+      font-size: 24px;
+      margin-top: -27px;
+      width: 24px;
+      border-radius: 13px;
+    }
+  }
+}
+
+.bulletbar-default{
+  li.active {
+    color: $facebook;
+    .glyphicon{
+      background-color: $twitter;
+    }
+
+    .bubble {
+      background-color: $angularjs;
+      color: #65d074;
+      border-color: #247830;
+
+      &:before,&:after{
+      background-color: #65d074;
+      border-color: #247830;
+    }
+
+    }
+  }
+}

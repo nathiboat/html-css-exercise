@@ -1,0 +1,121 @@
+.toggle-container {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 1em 0; }
+
+.toggle {
+  display: inline-block; }
+  .toggle input {
+    display: none; }
+  .toggle .toggle-btn {
+    width: 5em;
+    padding: 2px;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    display: block;
+    position: relative;
+    height: 2em;
+    border-radius: 1em;
+    cursor: pointer; }
+  .toggle label span {
+    display: block;
+    position: absolute;
+    width: calc(5em - 8px);
+    line-height: calc(2em - 4px);
+    font-weight: 700;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+  .toggle label span.on {
+    opacity: 0;
+    text-align: right;
+    padding-right: 2em; }
+  .toggle label span.off {
+    opacity: 1;
+    text-align: left;
+    padding-left: 2em; }
+  .toggle label:after {
+    width: calc(2em - 4px);
+    height: calc(2em - 4px);
+    background-color: #fff;
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    -webkit-transition: left 0.2s ease;
+    transition: left 0.2s ease; }
+  .toggle label.toggle-btn.active::after {
+    left: calc(3em + 2px); }
+  .toggle label.active span.on {
+    opacity: 1; }
+  .toggle label.active span.off {
+    opacity: 0; }
+
+.toggle-default label {
+  background-color: #b52e31; }
+  .toggle-default label span {
+    color: #fff; }
+
+.toggle-default label.active {
+  background-color: #a4c639; }
+
+.bulletbar {
+  margin: 0;
+  padding: 0;
+  font-size: 80%;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+  display: flex;
+  flex: 1; }
+  .bulletbar li {
+    list-style: none;
+    text-align: center;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    text-overflow: ellipsis;
+    color: #bbbbbb;
+    display: block; }
+    .bulletbar li:before {
+      left: 0;
+      display: block;
+      position: absolute;
+      top: 9px;
+      width: 100%;
+      height: 3px;
+      content: '';
+      background-color: #bbbbbb; }
+    .bulletbar li .bubble {
+      border-radius: 1000px;
+      width: 20px;
+      height: 20px;
+      background-color: #bbbbbb;
+      display: block;
+      margin: 0 auto 0.5em auto;
+      border-bottom: 1px solid #888888; }
+      .bulletbar li .bubble:after {
+        right: 0; }
+    .bulletbar li .glyphicon {
+      display: none; }
+  .bulletbar li.active .glyphicon {
+    display: block;
+    margin: 0 auto 0.1em auto;
+    font-size: 24px;
+    margin-top: -27px;
+    width: 24px;
+    border-radius: 13px; }
+
+.bulletbar-default li.active {
+  color: #3b5999; }
+  .bulletbar-default li.active .glyphicon {
+    background-color: #55acee; }
+  .bulletbar-default li.active .bubble {
+    background-color: #b52e31;
+    color: #65d074;
+    border-color: #247830; }
+    .bulletbar-default li.active .bubble:before, .bulletbar-default li.active .bubble:after {
+      background-color: #65d074;
+      border-color: #247830; }
